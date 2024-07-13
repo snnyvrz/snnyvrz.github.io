@@ -1,0 +1,21 @@
+{
+  "name": "snnyvrz.github.io",
+  "version": "1.0.0",
+  "description": "My Personal Homepage",
+  "main": "index.js",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/snnyvrz/snnyvrz.github.io"
+  },
+  "author": "sinaniya@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "astro": "^4.11.5"
+  }
+}

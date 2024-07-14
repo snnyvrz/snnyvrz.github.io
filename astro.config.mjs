@@ -5,4 +5,11 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   site: "https://snnyvrz.github.io",
   integrations: [tailwind()],
+  i18n: {
+    defaultLocale: "en",
+    locales: ["en", "fa"],
+    routing: {
+      prefixDefaultLocale: true,
+    },
+  },
 });

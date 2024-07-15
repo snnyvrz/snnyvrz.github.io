@@ -11,7 +11,11 @@ const t = useTranslations(lang);
   <div class="hero-content flex-col lg:flex-row">
     <Image class="max-w-sm rounded-lg shadow-2xl" src={me} alt="me" />
     <div class="max-w-md text-center md:text-start">
-      <h1 class="text-5xl font-bold">{t("hero.title")}</h1>
+      <h1
+        class="text-5xl font-bold dark:bg-none dark:text-base-content bg-gradient-to-r from-rose-500 via-indigo-800 to-blue-500 text-transparent bg-clip-text"
+      >
+        {t("hero.title")}
+      </h1>
       <h3 class="text-3xl py-6">{t("hero.subtitle")}</h3>
       <button class="btn btn-primary">
         {t("hero.button")}

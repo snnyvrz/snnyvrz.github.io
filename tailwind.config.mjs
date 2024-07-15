@@ -12,5 +12,5 @@ export default {
   daisyui: {
     themes: ["light", "synthwave"],
   },
-  darkMode: ["class", 'data-theme="synthwave"'],
+  darkMode: ["class", '[data-theme="synthwave"]'],
 };

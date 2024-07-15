@@ -1,5 +1,7 @@
 ---
+import Navbar from "../components/Navbar.astro";
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import "../global.css";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -8,7 +10,10 @@ const t = useTranslations(lang);
 <html lang={lang} dir={lang === "en" ? "ltr" : "rtl"}>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0,  maximum-scale=1, user-scalable=0"
+    />
     <script is:inline>
       if (localStorage.getItem("theme") === null) {
         document.documentElement.setAttribute("data-theme", "light");
@@ -24,7 +29,8 @@ const t = useTranslations(lang);
     </script>
     <title>{t("navbar.title")}</title>
   </head>
-  <body>
+  <body class={lang === "en" ? "font-poppins" : "font-vazir"}>
+    <Navbar />
     <slot />
   </body>
 </html>

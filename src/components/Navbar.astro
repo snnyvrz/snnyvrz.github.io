@@ -6,8 +6,8 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<div class="navbar fixed">
-  <div class="text-lg flex-1">{t("navbar.title")}</div>
+<div class="navbar fixed z-50 bg-base-200 top-0 right-0 left-0 w-screen">
+  <div class="text-xl font-bold flex-1">{t("navbar.title")}</div>
   <div class="flex-none">
     <label class="swap swap-rotate">
       <input
@@ -43,8 +43,10 @@ const t = useTranslations(lang);
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
+          fill="none"
           stroke="currentColor"
-          class="h-10 w-10 fill-current"
+          stroke-width="1.75"
+          class="h-10 w-10"
         >
           <path
             stroke-linecap="round"
@@ -55,7 +57,7 @@ const t = useTranslations(lang);
       </div>
       <ul
         tabindex="0"
-        class="menu dropdown-content bg-base-100 rounded-box z-[1] mt-4 w-52 p-2 shadow"
+        class="menu dropdown-content bg-base-100 rounded-box z-[1] mt-4 w-32 p-2 shadow"
       >
         {
           ["en", "fa"].map((key) => (

@@ -1,0 +1,19 @@
+---
+import TimelineTick from "./icons/TimelineTick.astro";
+interface Props {
+  year: string;
+  position: "start" | "middle" | "end";
+}
+const { year, position } = Astro.props;
+---
+
+<li>
+  {position !== "start" && <hr class="bg-primary" />}
+  <div class="timeline-start timeline-box">
+    {year}
+  </div>
+  <div class="timeline-middle">
+    <TimelineTick />
+  </div>
+  {position !== "end" && <hr class="bg-primary" />}
+</li>

@@ -1,8 +1,34 @@
 ---
 import Base from "../layouts/Base.astro";
 import Hero from "../components/Hero.astro";
+import TimelineItem from "./TimelineItem.astro";
+import { getYears } from "../utils/timeline";
+import { getLangFromUrl } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const years = getYears(lang);
+const lengthOfYears = years.length;
 ---
 
 <Base>
   <Hero />
+  <section id="know-more-section" class="container min-h-screen p-8 max-w-md">
+    <h1 class="pt-20">Know More</h1>
+    <ul class="timeline timeline-vertical">
+      {
+        years.map((y, i) => (
+          <TimelineItem
+            year={
+              lang === "fa"
+                ? y.toLocaleString("fa-IR", { useGrouping: false })
+                : y.toString()
+            }
+            position={
+              i === 0 ? "start" : i === lengthOfYears - 1 ? "end" : "middle"
+            }
+          />
+        ))
+      }
+    </ul>
+  </section>
 </Base>

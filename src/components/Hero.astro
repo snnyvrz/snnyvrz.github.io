@@ -17,7 +17,7 @@ const t = useTranslations(lang);
         {t("hero.title")}
       </h1>
       <h3 class="text-3xl py-6">{t("hero.subtitle")}</h3>
-      <button class="btn btn-primary">
+      <button id="know-more" class="btn btn-primary">
         {t("hero.button")}
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -36,3 +36,18 @@ const t = useTranslations(lang);
     </div>
   </div>
 </div>
+
+<script>
+  const knowMoreButton = document.getElementById("know-more");
+  const knowMoreSection = document.getElementById("know-more-section");
+
+  const onClick = () => {
+    knowMoreSection.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest",
+    });
+  };
+
+  knowMoreButton.addEventListener("click", onClick);
+</script>

@@ -42,12 +42,12 @@ const t = useTranslations(lang);
   const knowMoreSection = document.getElementById("know-more-section");
 
   const onClick = () => {
-    knowMoreSection.scrollIntoView({
+    knowMoreSection?.scrollIntoView({
       behavior: "smooth",
       block: "start",
       inline: "nearest",
     });
   };
 
-  knowMoreButton.addEventListener("click", onClick);
+  knowMoreButton?.addEventListener("click", onClick);
 </script>

@@ -1,0 +1,27 @@
+---
+import TimelineItem from "./TimelineItem.astro";
+import { getYears } from "../utils/timeline";
+import { getLangFromUrl } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const years = getYears();
+---
+
+<section
+  id="know-more-section"
+  class="container min-h-screen p-8 pt-20 max-w-md"
+>
+  <ul class="timeline timeline-vertical">
+    {
+      years.map((year, idx, arr) => (
+        <TimelineItem
+          lang={lang}
+          year={year}
+          position={
+            idx === 0 ? "start" : idx === arr.length - 1 ? "end" : "middle"
+          }
+        />
+      ))
+    }
+  </ul>
+</section>

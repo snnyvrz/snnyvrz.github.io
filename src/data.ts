@@ -1,19 +1,17 @@
 import { z } from "zod";
 import type { languages } from "./i18n/ui";
 
-type Category = "General" | "Education" | "Work";
+export type Category = "General" | "Education" | "Work";
 
-interface DataEntry {
+export interface DataEntry {
   title: string;
   category: Category;
   body?: string;
 }
 
 const key = z.number().min(1989).max(new Date().getFullYear());
-type Data = Record<
-  keyof typeof languages,
-  Record<z.infer<typeof key>, DataEntry[]>
->;
+export type YearEntry = Record<z.infer<typeof key>, DataEntry[]>;
+export type Data = Record<keyof typeof languages, YearEntry>;
 
 export const data: Data = {
   en: {

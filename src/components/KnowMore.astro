@@ -1,0 +1,12 @@
+---
+import { getLangFromUrl } from "../i18n/utils";
+import { Tabs } from "./Tabs";
+import { Timeline } from "./Timeline";
+
+const lang = getLangFromUrl(Astro.url);
+---
+
+<section id="know-more-section" class="container min-h-screen pt-20">
+  <Tabs lang={lang} client:only="react" />
+  <Timeline lang={lang} client:only="react" />
+</section>

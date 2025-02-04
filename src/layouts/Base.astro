@@ -30,7 +30,7 @@ const t = useTranslations(lang);
     </script>
     <title>{t("navbar.title")}</title>
   </head>
-  <body class={lang === "en" ? "font-poppins" : "font-vazir"}>
+  <body class={`flex flex-col justify-center ${lang === "en" ? "font-poppins" : "font-vazir"}`}>
     <Navbar />
     <slot />
     <Footer />

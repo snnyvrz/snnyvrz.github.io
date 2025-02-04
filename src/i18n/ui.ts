@@ -1,3 +1,9 @@
+export const languagesList = ["en", "fa"] as const;
+
+export type Language = (typeof languagesList)[number];
+
+export type Languages = typeof languages;
+
 export const languages = {
   en: "English",
   fa: "فارسی",

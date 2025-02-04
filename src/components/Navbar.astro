@@ -1,12 +1,14 @@
 ---
-import { languages } from "../i18n/ui";
+import { languages, languagesList } from "../i18n/ui";
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<div class="navbar fixed z-50 bg-base-200 top-0 right-0 left-0 w-screen">
+<div
+  class="navbar fixed z-50 bg-base-200 top-0 left-1/2 -translate-x-1/2 max-w-4xl"
+>
   <div class="text-xl font-bold flex-1">{t("navbar.title")}</div>
   <div class="flex-none">
     <label class="swap swap-rotate">
@@ -60,7 +62,7 @@ const t = useTranslations(lang);
         class="menu dropdown-content bg-base-100 rounded-box z-[1] mt-4 w-32 p-2 shadow"
       >
         {
-          ["en", "fa"].map((key) => (
+          languagesList.map((key) => (
             <li>
               {key === lang ? (
                 <p>{languages[key]}</p>

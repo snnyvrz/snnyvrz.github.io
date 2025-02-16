@@ -6,7 +6,7 @@ import { Timeline } from "./Timeline";
 const lang = getLangFromUrl(Astro.url);
 ---
 
-<section id="know-more-section" class="container min-h-screen pt-20">
+<section id="know-more-section" class="h-screen w-screen py-20">
   <Tabs lang={lang} client:only="react" />
   <Timeline lang={lang} client:only="react" />
 </section>

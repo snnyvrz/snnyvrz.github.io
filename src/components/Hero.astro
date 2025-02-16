@@ -9,15 +9,15 @@ const t = useTranslations(lang);
 
 <div class="hero bg-base-200 py-[4rem] max-w-4xl mx-auto border-x-2">
   <div class="hero-content flex-col lg:flex-row">
-    <Image class="max-w-sm rounded-lg shadow-2xl" src={me} alt="me" />
+    <Image id="me" class="max-w-sm rounded-lg shadow-2xl" src={me} alt="me" />
     <div class="max-w-md text-center md:text-start">
       <h1
-        class="text-5xl font-bold dark:bg-none dark:text-base-content bg-gradient-to-r from-rose-500 via-indigo-800 to-blue-500 text-transparent bg-clip-text"
+        class="hero-items text-5xl font-bold dark:bg-none dark:text-base-content bg-gradient-to-r from-rose-500 via-indigo-800 to-blue-500 text-transparent bg-clip-text"
       >
         {t("hero.title")}
       </h1>
-      <h3 class="text-3xl py-6">{t("hero.subtitle")}</h3>
-      <button id="know-more" class="btn btn-primary">
+      <h3 class="hero-items text-3xl py-6">{t("hero.subtitle")}</h3>
+      <button id="know-more" class="hero-items btn btn-primary">
         {t("hero.button")}
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -53,7 +53,10 @@ const t = useTranslations(lang);
 </script>
 
 <script>
-  import { animate } from "motion";
+  import { animate, delay, stagger } from "motion";
 
-  animate(".hero-content", { opacity: [0, 1] }, { duration: 1, delay: 0.5 });
+  const heroItems = document.querySelectorAll(".hero-items");
+
+  animate("#me", { opacity: [0, 1] }, { duration: 1, delay: 1.5 });
+  animate(heroItems, { opacity: [0, 1] }, { duration: 1, delay: stagger(0.5) });
 </script>

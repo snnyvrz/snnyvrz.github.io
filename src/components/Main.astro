@@ -12,9 +12,12 @@ const t = useTranslations(lang);
   <Hero />
   <KnowMore />
   <div
-    class="flex justify-center align-middle w-[100%] max-w-4xl p-8 self-center border-x-2"
+    class="flex flex-col justify-center align-middle w-[100%] max-w-4xl py-8 self-center border-x-2"
   >
-    <a href="/cv.pdf" download="SinaNiyavarziResume">
+    <div class="divider">
+      {t("downloadCV.title")}
+    </div>
+    <a class="mx-auto" href="/cv.pdf" download="SinaNiyavarziResume.pdf">
       <button class="btn btn-wide btn-outline btn-primary"
         >{t("downloadCV")}
         <svg

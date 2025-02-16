@@ -1,15 +1,17 @@
 ---
-import { getLangFromUrl } from "../i18n/utils";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
 import { Tabs } from "./Tabs";
 import { Timeline } from "./Timeline";
 
 const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <section
   id="know-more-section"
   class="h-screen max-w-4xl pt-20 mx-auto border-x-2 w-[100%]"
 >
+  <div class="divider">{t("timeline.title")}</div>
   <Tabs lang={lang} client:only="react" />
   <Timeline lang={lang} client:only="react" />
 </section>

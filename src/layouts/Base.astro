@@ -1,4 +1,6 @@
 ---
+import { SEO } from "astro-seo";
+
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
@@ -10,6 +12,10 @@ const t = useTranslations(lang);
 
 <html lang={lang} dir={lang === "en" ? "ltr" : "rtl"}>
   <head>
+    <SEO
+      title="Sina Niyavarzi Home Page"
+      description="Sina Niyavarzi Home Page"
+    />
     <meta charset="utf-8" />
     <meta
       name="viewport"

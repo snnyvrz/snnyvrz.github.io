@@ -46,8 +46,12 @@ const t = useTranslations(lang);
     <div id="stars-group-4"></div>
     <div id="stars-group-5"></div>
     <div id="stars-group-6"></div>
-    <Navbar />
+    <div class="fixed top-0 left-0 right-0 h-[4rem] border-b-2 z-50">
+      <Navbar />
+    </div>
     <slot />
-    <Footer />
+    <div class="border-t-2">
+      <Footer />
+    </div>
   </body>
 </html>

@@ -7,34 +7,11 @@ const t = useTranslations(lang);
 ---
 
 <div
-  class="navbar fixed z-50 bg-base-200 top-0 left-1/2 -translate-x-1/2 max-w-4xl"
+  class="navbar fixed z-50 bg-base-200 top-0 left-1/2 -translate-x-1/2 max-w-4xl border-x-2 border-b-2 h-[4rem]"
 >
   <div class="text-xl font-bold flex-1">{t("navbar.title")}</div>
   <div class="flex-none">
-    <a href="/cv.pdf" download="SinaNiyavarziResume">
-      <button class="btn btn-wide"
-        >Download CV
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="lucide lucide-download"
-          ><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline
-            points="7 10 12 15 17 10"></polyline><line
-            x1="12"
-            x2="12"
-            y1="15"
-            y2="3"></line></svg
-        >
-      </button>
-    </a>
-    <label class="swap swap-rotate">
+    <label class="swap swap-rotate px-2">
       <input
         type="checkbox"
         class="theme-controller"
@@ -64,7 +41,7 @@ const t = useTranslations(lang);
       </svg>
     </label>
     <div class="dropdown dropdown-end">
-      <div tabindex="0" role="button" class="btn btn-ghost rounded-btn">
+      <div tabindex="0" role="button" class="btn btn-ghost rounded-btn p-0">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"

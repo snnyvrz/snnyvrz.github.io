@@ -51,3 +51,9 @@ const t = useTranslations(lang);
 
   knowMoreButton?.addEventListener("click", onClick);
 </script>
+
+<script>
+  import { animate } from "motion";
+
+  animate(".hero-content", { opacity: [0, 1] }, { duration: 1, delay: 0.5 });
+</script>

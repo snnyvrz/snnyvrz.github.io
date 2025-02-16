@@ -21,6 +21,7 @@ export const ui = {
     "timelineTabs.general": "General",
     "timelineTabs.education": "Education",
     "timelineTabs.work": "Work",
+    downloadCV: "Download CV",
   },
   fa: {
     "navbar.title": "سینا نیاورزی",
@@ -31,5 +32,6 @@ export const ui = {
     "timelineTabs.general": "عمومی",
     "timelineTabs.education": "تحصیلی",
     "timelineTabs.work": "کاری",
+    downloadCV: "دانلود رزومه",
   },
 } as const;

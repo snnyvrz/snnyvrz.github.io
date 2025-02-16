@@ -2,6 +2,10 @@
 import Base from "../layouts/Base.astro";
 import Hero from "../components/Hero.astro";
 import KnowMore from "./KnowMore.astro";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <Base>
@@ -12,7 +16,7 @@ import KnowMore from "./KnowMore.astro";
   >
     <a href="/cv.pdf" download="SinaNiyavarziResume">
       <button class="btn btn-wide btn-outline btn-primary"
-        >Download CV
+        >{t("downloadCV")}
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
